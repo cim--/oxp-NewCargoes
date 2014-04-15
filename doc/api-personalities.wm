@@ -1,0 +1,70 @@
+Any world script registered as providing trade floor personalities for New Cargoes through
+[[NewCargoesAPI#registerPersonality]] must contain all of these
+functions.
+
+Look at the Scripts/cargotypefetch.js script of the New Cargoes OXP
+for a simple example.
+
+==Trade floor functions==
+
+===traderDesc===
+<code>String traderDesc()</code>
+
+Returns a basic introduction and greeting for the trader, to be shown on New Cargoes trade floor screen before the player starts dealing with them. The player will get the option to either talk to the trader (which starts [[#runOffer]]) or move on to another person on the trade floor.
+
+===traderHere===
+<code>bool traderHere(PrimaryRole? srole)</code>
+
+Return true if the trader is at the specified station (srole will be
+blank for main stations, and the primary role otherwise), and false
+otherwise.
+
+===traderName===
+<code>String traderName()</code>
+
+Return the name and title of the trader. e.g. "Vela Smithson, bounty
+hunter". Should be kept relatively short, and shouldn't change unless
+the trader's identity does.
+
+===runOffer===
+<code>void runOffer()</code>
+
+This function is called when New Cargoes hands control of the mission
+screen to this script. This function should call whatever functions
+are necessary (including at least one
+[[Oolite_JavaScript_Reference:_Mission#runScreen]]) to talk the player
+through any deals they might accept or reject, change the player's
+hold contents or cash levels, and so on.
+
+Unless the result of talking to the trader means that the player is
+immediately launched from the station, or temporarily incapacitated
+(e.g. by arrest), then when the player's dealings with the trader are
+over, you should call
+<code>worldScripts["CargoTypeExtension"].tradeFloor();</code>.
+
+==Information functions==
+
+===describeContracts===
+<code>String describeContracts()</code>
+
+If the player has any active contracts with the personalities in this
+world script, this function should return a string describing
+them. The description should be less than 80 characters per contract,
+and each contract should be described on a separate line. The final
+contract should end in a new line "\n" as well.
+
+If there are no active contracts, return the empty string (no new
+line).
+
+Use of this is generally preferred to describing the contracts with
+mission information on the F5 F5 screen.
+
+===traderGossip===
+<code>String? traderGossip()</code>
+
+If you wish there to be gossip in the trader bars of this system about
+the individuals defined by this script, return it here. Gossip should
+be at most 80 characters in length, and start with the string "* ".
+
+Otherwise return false.
+

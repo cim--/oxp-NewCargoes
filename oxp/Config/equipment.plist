@@ -1,0 +1,32 @@
+(
+ (
+	1,
+	10000,
+	"TraderNet Monthly Subscription",
+	"EQ_CTE_TRADERNET",
+	"A 30 day subscription to TraderNet updates: the most accurate trading news in the 8 galaxies",
+ {
+	 "available_to_all" = "YES";
+   "available_to_NPCs" = "no";
+   "portable_between_ships" = "yes";
+	 "damage_probability" = 0;
+	 "visible" = yes;
+ }
+	),
+ (
+	1,
+	7500,
+	"TraderNet Monthly Subscription (Renewal)",
+	"EQ_CTE_TRADERNET_RENEWAL",
+	"A 30 day subscription extension to TraderNet updates, including renewal discount.",
+ {
+	 "available_to_all" = "YES";
+   "available_to_NPCs" = "no";
+	 "requires_equipment" = "EQ_CTE_TRADERNET";
+	 "conditions" = (
+		 "mission_cargotypeextension_tradenetrenew equal 1"
+									 );
+ }
+	)
+
+)

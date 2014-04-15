@@ -1,0 +1,141 @@
+<blockquote>Top level category sales were for those who were happy to
+take what they could get for their cargo. Turn up at a High Tech, Rich
+Industrial world whose only green patches are for Zero-G cricket
+pitches and you'll get 7Cr per TC for your food irrespective of
+whether its Freeze-dried Qubeian Sprouts or Spiced Laveian Tree
+Grubs. But spend a little time, dig a little deeper and take a little
+more risk and profits could be doubled, tripled on occasion, if only
+you can match what you're selling to what somebody else wants to
+buy.</blockquote>
+[[Alien_Items|''Lazarus'' by DaddyHoggy]]
+
+New Cargoes adds over 100 new trade goods to the 8 galaxies, on the
+model described in ''Lazarus''. Each new good is a more specific
+variety of one of the generic cargoes: valuable to the right buyer,
+largely worthless otherwise. In addition, a variety of new trading
+opportunities are available.
+
+New Cargoes is designed to allow other OXPs to add cargoes, traders,
+and events to the universe as a framework.
+
+==Installation==
+
+The current version of New Cargoes is 0.8.0. This is a preview and
+test version. Most of the features are stable and function reliably,
+but some of the newer features may undergo minor changes before the
+finished release.
+
+As it is a test release, it will add a ''lot'' of messages to your
+Latest.log. Most of these can be ignored, and will disappear from the
+finished release.
+
+[http://compsoc.dur.ac.uk/~cim/oolite/New_Cargoes_0.8.0.zip Download] and install in the usual way. Also download and install [[Snoopers]] if you don't already have it.
+
+==Using New Cargoes==
+[[Image:New_Cargoes.png|width=250|right]]
+
+Once New Cargoes is installed, load your saved game or start a new
+one. If this is the first time you have loaded the game since
+installing New Cargoes, you should wait around 10 seconds before
+continuing, to ensure that all New Cargoes data is initialised
+properly.
+
+At a main station, press F8 three times to get to the New Cargoes
+trade interface. At a supported non-main station, press F2 then F8
+instead. When you have finished, select "Exit specialist cargo
+trading" to return to your ship.
+
+===Buying and selling cargo===
+
+Your first option allows you to buy special cargo from the station's
+market. This will be available in moderate quantities for a set price,
+similar to the standard trade goods. As usual, you must have room in
+your hold and enough credits on hand to buy the cargo. It will then
+appear on your ship's manifest as 1TC of the appropriate generic cargo
+type. For instance, if you buy "Goat Soup", it will appear as "Food"
+on your manifest.
+
+The second option allows you to sell carried cargo to buyers at the
+station. Again, the price is set automatically for this service. Make
+sure you sell special cargo in this way rather than through the
+general F8 screen, or you will make a significant loss.
+
+The trick, of course, is to buy the cargo cheaply at a system where it
+is plentiful, and then take it to sell for massive profits at a system
+where it is rare but desired. For most goods there will only be a
+small number of systems in each galaxy that really want to buy them.
+
+===Listening to gossip===
+
+The third option takes you to the trader bars to gather
+gossip. Traders are sometimes happy to chat about their recent
+successes and failures, and intentionally giving misinformation is
+rare. Do remember, however, that just because one trader made a
+massive profit taking cargo from A to B doesn't mean you'll
+automatically be able to do the same. Try to confirm any information
+you pick up here before acting on it.
+
+===Trade deals===
+
+The fourth option takes you to the trade floor. In most main stations
+there will be someone here offering a more interesting deal - an
+auction, a special contract, a permit to legally carry controlled
+goods, or something else. Be careful, as not everyone here will have
+your best interests in mind. Make sure that you can fulfil your side
+of the deal before signing any agreements.
+
+===Detailed manifest===
+
+The fifth option shows your manifest in more detail, on multiple pages
+if needed. The origin of goods you have collected will be shown to aid
+your memory and help you assess your profit margins.
+
+===Contracts and permits===
+
+The sixth option shows you details of the contracts you have entered
+into, any permits you are carrying, and any special regulations
+applying to trade in this system.
+
+==How to trade well==
+
+The concise summary:
+* Look at as many sources of information as you can about trade goods, and look for patterns in what can be bought and sold where.
+* Plan your route in advance. If you don't have a full hold, maybe there's a short detour that would be profitable on the way.
+* Get a TraderNet subscription, and keep it renewed. If you hear about something nearby, act quickly.
+
+[[New_Cargoes_Trading_Advice|More detailed trading advice]].
+
+==Difficulty==
+
+There's no extra ''combat'' difficulty directly resulting from this
+OXP, but if you choose to trade mostly or exclusively in new cargoes,
+then making a trading profit will become much less reliable (though
+there are higher profits when you succeed), and may require you to
+travel through more dangerous systems.
+
+==New Cargoes for OXP writers==
+
+New Cargoes provides a flexible framework for other OXPs to add extra cargoes and trade opportunities. See the [[NewCargoesAPI|New Cargoes API reference]] for more information.
+
+==Incompatibility==
+
+At the moment, New Cargoes is not compatible with Vortex/HyperCargo -
+any cargo placed in the virtual holds is likely to disappear from your
+manifest. This is being worked on: until then, do not put cargo in to
+your virtual holds if it contains special goods.
+
+Illegal Goods Tweak does not currently respect import permits. Again,
+this is being worked on. As long as you restrict your trade to legal
+goods, this will not be a problem for you.
+
+==Quick Facts==
+{{OXPLevel|0}}{{Infobox OXPb| title = New Cargoes
+|version = 0.8.0
+|release = 2012-03-31
+|features = New cargoes and trade contracts
+|license = CC-BY-SA 3
+|category = Activities OXPs
+|author = [[User:cim|cim]]
+|download = [[#Download|See Download]]
+|feedback = [http://aegidian.org/bb/viewtopic.php?f=4&t=11519 BB-Link]
+}}

@@ -1,0 +1,319 @@
+The [[New_Cargoes|New Cargoes]] API allows other OXPs to extend its
+functionality in a variety of ways. All API functions are in the
+CargoTypeExtension worldScript, and are called with
+<code>worldScript.CargoTypeExtension.''functionName''</code>
+
+==Registration==
+
+Other than <code>registerCargo</code>, each of these functions
+registers a world script as one which will respond to queries from New
+Cargoes in certain situations. The same world script can be registered
+with any or all of the four modules.
+
+===registerCargoType===
+<code>bool registerCargoType(CargoDefinition obj)</code>
+
+This function registers a new cargo type with New Cargoes (or
+redefines an existing one). It takes as its parameter an object with a
+number of keys, the first five of which are required. The default
+values will give a cargo that is in general around twice as profitable
+in the long term than safe trading of the same generic good in an
+Agri/Ind pair, provided that the trader makes reasonably optimal
+decisions:
+
+* '''ID''': The unique ID of the cargo type. Can only contain letters, numbers, underscores, dots and dashes.
+* '''genericType''': The generic cargo type. The cargo will appear as this type on the player's F8 manifest. One of "food", "textiles", "radioactives", "slaves", "liquorWines", "luxuries", "narcotics", "computers", "machinery", "alloys", "firearms", "furs", "minerals", or "alienItems".
+* '''specificType''': The specific cargo type. This is the name shown to the player for the cargo by New Cargoes (e.g. "Farming Equipment")
+* '''buySystems''': An array containing 8 arrays of system IDs, one for each galaxy. The systems at which this cargo can usually be bought at the main station. (e.g. <nowiki>[[124,54],[152,178,80],[124,109,91,82],[34,245],[155,76],[238,197],[54],[99,101,115]]</nowiki>)
+* '''sellSystems''': An array containing 8 arrays of system IDs, one for each galaxy. The systems at which this cargo can usually be sold for profit at the main station.
+* '''desc''': A long description (recommended 500 characters or fewer for most cargoes) of the cargo. This has no direct gameplay effect, but is useful for flavour, and can be used to give hints about good places to buy or sell the cargo.
+* '''buyAdjust''': The average amount, in percent, that this cargo is more expensive than a generic TC of its type, at an exporting main station. Defaults to 80% if not set. This should be reasonably high to avoid it being generally profitable to re-sell special cargo as its generic type. This also slightly affects the price at stations which are neither importers nor exporters.
+* '''buyVariance''': The percentage range above or below '''buyAdjust''' that the export price will vary. Defaults to 30% if not set.
+* '''buyQuantity''': The average amount of this cargo as a percentage of the availability of generic goods at a main station which exports this good. Defaults to 50% if not set. If this is negative, this cargo will never be available for purchase on a main station market, and must be acquired by other methods. There will always be at least 10TC available if this option is zero or positive.
+* '''buyAvailability''': The percentage range of variation in export quantity. Defaults to 100%. As with '''buyQuantity''', there will always be at least 10TC available.
+* '''sellAdjust''': The average amount, in percent, that this cargo is more expensive than a generic TC of its type, at an importing main station. This should generally be at least slightly higher than '''buyAdjust''', and defaults to 100% if not set.
+* '''sellVariance''': The percentage range above or below '''sellAdjust''' that the export price will vary. Defaults to 50% if not set.
+* '''sellDistance''': The maximum percentage bonus to the sales price per LY of transport distance between an importing system and the nearest consistent exporter. For reference, the galaxy is about 100 LY corner to diagonally-opposite corner. If the good is not available in the current galaxy (or only in a part of the galaxy disconnected from the importer), the distance is treated as 150 LY. The default value is 10%.
+* '''illegal''': The illegality level of trading in this good, ''in addition to'' any illegality applied to the base good. For reference, generic Slaves and Firearms have an illegality level of 1, and generic Narcotics have an illegality level of 2. All illegality levels defined on cargo are provisional subject to adjustments by Permits, and by default apply to leaving a station with cargo only.
+* '''slump''': The percentage chance each day that one of the systems which normally imports this good will stop doing so temporarily. Defaults to 2%. Other factors may cause a system market to "slump" regardless of this chance.
+* '''unslump''': The percentage chance each day that no systems "slump" for this good that a system which has previously been affected will return to normal market behaviour. Defaults to 7%.
+* '''sourceRumour''': The percentage chance that rumours in trader gossip about systems exporting this good will be accurate. Set this to negative to prevent rumours about systems selling this good appearing at all. Default 90%.
+* '''destinationRumour''': The percentage chance that rumours in trader gossip about systems importing this good will be accurate. Set this to negative to prevent rumours about systems buying this good appearing at all. Default 70%.
+* '''salvageMarket''': The chance of a small amount of this good appearing on the market of a main station. Defaults to 5%. OXP stations may modify this chance relative to the base chance. Set it to negative if it should never appear on main station markets outside of export systems.
+* '''forbidExtension''':  If this is set to 1, then well-behaved extensions to New Cargoes should ignore this cargo unless they are intentionally doing something with it (e.g. if they are the extension that defined it!). The default value is zero.
+
+===registerOXPStation===
+<code>void registerOXPStation(worldScript name, shipRole role)</code>
+
+Registers the named world script with New Cargoes as defining the
+cargo market at an OXP station with the given
+[[Oolite_JavaScript_Reference:_Ship#primaryRole|primaryRole]]. The
+world script must contain the functions described by the
+[[NewCargoesAPI/OXPStations]] module.
+
+A single world script may define cargo markets for multiple OXP
+stations, but it is recommended that you only do this if the stations
+have identical cargo markets.
+
+This will not affect markets at the main station even if the main
+station has the specified role.
+
+===registerPermit===
+<code>void registerPermit(worldScript name)</code>
+
+Registers the named world script with New Cargoes as defining import
+or export permit behaviour. Permits allow the legality of goods to be
+changed from the default values in specified circumstances. The world
+script must contain the functions described by the
+[[NewCargoesAPI/Permits]] module.
+
+===registerPersonality===
+<code>void registerPersonality(worldScript name)</code>
+
+Registers the named world script with New Cargoes as defining
+personalities to appear on the trade floor of stations, who may offer
+a variety of deals to the player. The world script must contain the
+functions described by the [[NewCargoesAPI/Personalities]] module.
+
+===registerPriceChange===
+<code>void registerPriceChange(worldScript name)</code>
+
+Registers the named world script with New Cargoes as defining price
+changes to be applied to new cargoes goods pricing. The world script
+must contain the functions described by the [[NewCargoesAPI/Pricing]]
+module.
+
+==The player's manifest==
+
+===addSpecialCargo===
+<code>bool addSpecialCargo(CargoID id, String origininfo)</code>
+
+Attempts to adds 1 TC of special cargo to the player's hold, and
+returns true if successful. There must be sufficient hold space
+available, and the cargo ID must have previously been defined.
+
+''origininfo'' is a description of the origin of the good - for
+example "scooped in Aesbion" or "25Cr/TC in Anisqu"
+
+===hasSpecialCargo===
+<code>int hasSpecialCargo(CargoID id)</code>
+
+Returns the number of TCs of the given cargo which the player
+currently has in their manifest.
+
+===removeSpecialCargo===
+<code>bool removeSpecialCargo(CargoID id)</code>
+
+Attempts to remove 1 TC of special cargo from the player's hold,
+returning true if successful.
+
+===restorePlayerManifest===
+<code>bool restorePlayerManifest(SerialisedData ncmanifest)</code>
+
+Discards all new cargoes information for the player, and replaces it
+with the contents of ncmanifest (which must have been generated by
+[[#suspendPlayerManifest]]). Returns false if the manifest
+data is not recognised.
+
+Users of this function must ensure that after this operation the
+player's hold contains sufficient generic cargo of the correct types
+for the provided data to make sense, or some special cargo will be
+lost.
+
+===specialCargoesCarried===
+<code>CargoIDs specialCargoesCarried()</code>
+Returns a list of the IDs of the distinct cargo types carried by the player.
+
+===suspendPlayerManifest===
+<code>SerialisedData suspendPlayerManifest(SerialisedData ncmanifest)</code>
+
+Discards all new cargoes information for the player, converting all
+hold goods to their generic type, and returns a string describing
+their specific types which can be given to
+[[#restorePlayerManifest]] later.
+
+In general, users of this function will want to follow it up by
+removing the generic cargo from the player's hold too.
+
+==System Trading data==
+
+===cargoPriceExport===
+<code>int cargoPriceExport(CargoID id, int i, WorldScript marketinfo)</code>
+
+Returns a sample price (''in tenths of a credit'') at which the specified cargo would be available
+if a station in this system exported that cargo.
+
+''i'' is a seed for the random number generation, so the price given
+by this function may not match the real price.
+
+''marketinfo'' is the world script that defines the market for the relevant station. (e.g. <code>worldScripts["CargoTypeExtension-Station-RockHermit"]</code>) Use [[#defaultMarketInfo]] for the main station.
+
+===cargoPriceImport===
+<code>int cargoPriceImport(CargoID id, int i, WorldScript marketinfo)</code>
+
+Returns a sample price (''in tenths of a credit'') at which the specified cargo would be available
+if a station in this system imported that cargo.
+
+''i'' is a seed for the random number generation, so the price given
+by this function may not match the real price.
+
+''marketinfo'' is the world script that defines the market for the relevant station. (e.g. <code>worldScripts["CargoTypeExtension-Station-RockHermit"]</code>) Use [[#defaultMarketInfo]] for the main station.
+
+===cargoPriceMisc===
+<code>int cargoPriceMisc(CargoID id, int i, WorldScript marketinfo)</code>
+
+Returns a sample price (''in tenths of a credit'') at which the specified cargo would be available
+if a station in this system neither imported nor exported that cargo.
+
+''i'' is a seed for the random number generation, so the price given
+by this function may not match the real price.
+
+''marketinfo'' is the world script that defines the market for the relevant station. (e.g. <code>worldScripts["CargoTypeExtension-Station-RockHermit"]</code>) Use [[#defaultMarketInfo]] for the main station.
+
+===cargoQuantityExport===
+<code>int cargoQuantityMisc(CargoID id, int i, WorldScript marketinfo)</code>
+
+Returns a sample amount of TC available if a station in this system
+did not export that cargo.
+
+''i'' is a seed for the random number generation, so the price given
+by this function may not match the real price.
+
+''marketinfo'' is the world script that defines the market for the relevant station. (e.g. <code>worldScripts["CargoTypeExtension-Station-RockHermit"]</code>) Use [[#defaultMarketInfo]] for the main station.
+
+===cargoQuantityMisc===
+<code>int cargoQuantityMisc(CargoID id, int i, WorldScript marketinfo)</code>
+
+Returns a sample amount of TC available if a station in this system
+did not export that cargo.
+
+''i'' is a seed for the random number generation, so the price given
+by this function may not match the real price.
+
+''marketinfo'' is the world script that defines the market for the relevant station. (e.g. <code>worldScripts["CargoTypeExtension-Station-RockHermit"]</code>) Use [[#defaultMarketInfo]] for the main station.
+
+===defaultMarketInfo===
+<code>WorldScript defaultMarketInfo()</code>
+
+Returns the default market information used for the system main
+station, for functions like [[#cargoPriceImport]].
+
+===exportPermitDetails===
+<code>ints importPermitDetails(CargoID good, int quantity)</code>
+
+Returns a list of the per-TC legal penalties that would be applied if
+the player attempted to launch from a law-abiding station (i.e. main
+stations and specified OXP stations) in this system, with that
+quantity of that cargo. If the total of the list items is zero or
+less, no penalty would actually be applied.
+
+This does not include the default launch penalty for slaves, narcotics
+and firearms.
+
+In general [[#exportPermitLevel]] provides sufficient information.
+
+===exportPermitLevel===
+<code>int importPermitLevel(CargoID good, int quantity)</code>
+
+Returns the per-TC legal penalty that would be applied if the player
+attempted to launch from a law-abiding station (i.e. main stations and
+specified OXP stations) in this system, with that quantity of that
+cargo.
+
+This does not include the default launch penalty for slaves, narcotics
+and firearms.
+
+===importPermitDetails===
+<code>ints importPermitDetails(CargoID good, int quantity)</code>
+
+Returns a list of the per-TC legal penalties that would be applied if
+the player attempted to dock at a law-abiding station (i.e. main
+stations and specified OXP stations) in this system, with that
+quantity of that cargo. If the total of the list items is zero or
+less, no penalty would actually be applied.
+
+In general [[#importPermitLevel]] provides sufficient information.
+
+===importPermitLevel===
+<code>int importPermitLevel(CargoID good, int quantity)</code>
+
+Returns the per-TC legal penalty that would be applied if the player
+attempted to dock at a law-abiding station (i.e. main stations and
+specified OXP stations) in this system, with that quantity of that
+cargo.
+
+===localCargoData===
+<code>(int,int) localCargoData(CargoID goodid)</code>
+
+Returns a two-element list. The first element is the quantity in TC of
+the specified good on the local main station market, and the second
+element is the cost in Cr/TC.
+
+===marketCollapsed===
+<code>bool marketCollapsed(CargoID good, GalaxyNumber galaxy, SystemID system)</code>
+
+Returns true if the export or import market has collapsed for a
+particular good in the specified system, false if the market is
+normal.
+
+===systemImports===
+<code>CargoIDs systemImports(GalaxyNumber gal, SystemID sys)</code>
+
+Returns a list of the cargoes imported at the main station of the
+specified system.
+
+===systemExports===
+<code>CargoIDs systemExports(GalaxyNumber gal, SystemID sys)</code>
+
+Returns a list of the cargoes exported by the main station of the
+specified system.
+
+==Cargo Information==
+
+===cargoDefinition===
+<code>variable cargoDefinition(CargoID good, CargoParam param)</code>
+
+Returns the specified parameter from the definition of the cargo. For example:
+ cargoDefinition("CTE_CTS_F3","genericType"); // "food" 
+
+===controlledGood===
+<code>int controlledGood(CargoID good)</code>
+
+Returns the basic export penalty for this good, ''including'' any
+effects from the generic type.
+
+===extendableCargo===
+<code>CargoID? extendableCargo(CargoType ctype)</code>
+
+Returns a random cargo of the specified type for which the
+'''forbidExtension''' property is false.
+
+''ctype'' can be one of the following:
+* The empty string '''""''': returns a cargo exported by the current system's main station.
+* '''"any"''': any cargo
+* Any valid '''genericType''' value: returns a cargo of that generic type.
+
+It will return false if no suitable cargoes exist.
+
+===extendableCargoSeeded===
+<code>CargoID? extendableCargo(CargoType ctype, int seed)</code>
+
+Like [[#extendableCargo]] but returns the same cargo each time for any
+given seed. (If the list of registered cargoes changes, this function
+is not guaranteed to give the same result after that change)
+
+==Miscellaneous==
+
+===addTraderNet===
+<code>void addTraderNet(String msg)</code>
+
+Adds the given message to the queue of messages waiting in
+TraderNet. A number of messages will be drawn from this queue for
+display. Messages must conform to the usual [[Snoopers]] rules for
+message length and content.
+
+==tradeFloor==
+<code>void tradeFloor()</code>
+
+Used to return the player to the trade floor after talking with a
+trade floor personality.

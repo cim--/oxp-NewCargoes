@@ -1,0 +1,14 @@
+// Some gossip for the list; should be deterministic
+string traderGossip();
+
+// Is there a trader of this type currently on the trade floor
+bool traderHere();
+
+// Name of the trader
+string traderName();
+
+// Description of the trader's offer
+string traderDesc();
+
+// called to pass control to the trade script if the player decides to talk
+void runOffer();

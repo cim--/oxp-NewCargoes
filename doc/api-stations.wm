@@ -1,0 +1,85 @@
+Any world script registered as providing OXP station market
+definitions for New Cargoes through
+[[NewCargoesAPI#registerOXPStation]] must contain all of these
+functions.
+
+Look at the Scripts/Stations subfolder of the New Cargoes OXP for examples.
+
+==Cargo availability==
+
+===exportCargoAmount===
+<code>int exportCargoAmount(CargoID good)</code>
+
+The amount ''relative to the main station'' of goods of that type carried by this station if the good is a system export. Should generally be in the range 0-2.
+
+===exportCargoPrice===
+<code>int exportCargoPrice(CargoID good)</code>
+
+The price ''relative to the main station'' of goods of that type
+carried by this station if the good is a system export. Should
+generally be in the range 0.8-1.2.
+
+===importCargoPrice===
+<code>int	importCargoPrice(CargoID good)</code>
+
+The price ''relative to the main station'' of goods of that type
+sold at this station if the good is a system or station import. Should
+generally be in the range 0.8-1.2.
+
+===randomCargoAmount===
+<code>int randomCargoAmount(CargoID good)</code>
+
+The maximum amount of non-export cargo to be found at this station. 3
+is equivalent to the main station market, and 10 or more should be
+extremely rare.
+
+===randomCargoChance===
+<code>int randomCargoChange(CargoID good)</code>
+
+The chance ''relative to the main station'' that this good will be
+available in small quantities if it is not a system export. This
+should generally be in the range 0-2; higher numbers may make it very
+easy to exploit the trade prices algorithm for absurd profits.
+
+===randomImportChance===
+<code>int randomImportChance(CargoID good)</code>
+
+The ''absolute'' chance that this good will be imported by this
+station if it is ''not'' a system import. Should generally be low -
+0.01 or less - though higher numbers up to 1 may be used for goods
+thematically suited to the station.
+
+===systemImportChance===
+<code>int systemImportChance(CargoID good)</code>
+
+The ''absolute'' chance that this good will be imported by this
+station if it is also a system import. Must be between 0 and 1.
+
+==Legality==
+
+===exportPermitCheck===
+<code>bool exportPermitCheck()</code>
+
+Return true if the player's hold should be checked and legal penalties
+applied like a main station which the player launches from this
+station. This will also apply to players carrying generic cargo only,
+so use it with caution!
+
+===importPermitCheck===
+<code>bool importPermitCheck()</code>
+
+Return true if the player's hold should be checked and legal penalties
+applied like a main station which the player docks at this
+station. This technically also applies to players carrying generic
+cargo only, though of course there is usually no penalty for this.
+
+==Rumours==
+
+===stationGossip===
+<code>String? stationGossip</code>
+
+If you wish there to be gossip in the trader bars of this system about
+this station, return it here. Gossip should be at most 80 characters in
+length, and start with the string "* ".
+
+Otherwise return false.

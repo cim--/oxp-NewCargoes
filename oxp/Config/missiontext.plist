@@ -1,0 +1,160 @@
+{
+	"cte_initscreenchoice" = {
+		"01_BUY" = "Buy specialist cargo";
+		"02_SELL" = "Sell specialist cargo";
+		"03_WANTED" = "Gather trade route information";
+		"04_TRADERS" = "Enter the trade floor";
+		"05_MANIFEST" = "View detailed manifest";
+		"06_PERMITS" = "View permits, contracts and regulations";
+		"09_LEAVE" = "Exit specialist cargo trading";
+	};
+
+	"cte_initscreenchoice_wtn" = {
+		"01_BUY" = "Buy specialist cargo";
+		"02_SELL" = "Sell specialist cargo";
+		"03_WANTED" = "Gather trade route information";
+		"04_TRADERS" = "Enter the trade floor";
+		"05_MANIFEST" = "View detailed manifest";
+		"06_PERMITS" = "View permits, contracts and regulations";
+		"07_TRADERNET" = "Read TraderNet news";
+		"09_LEAVE" = "Exit specialist cargo trading";
+	};
+
+	"cte_initscreenoxpchoice" = {
+		"01_BUY" = "Buy specialist cargo";
+		"02_SELL" = "Sell specialist cargo";
+		"05_MANIFEST" = "View detailed manifest";
+		"06_PERMITS" = "View permits and regulations";
+		"09_LEAVE" = "Exit specialist cargo trading";
+	};
+
+	"cte_buyscreenchoice" = {
+		"00_NEXT" = "View next offer";
+		"01_BUY1" = "Buy 1 TC";
+		"02_BUY10" = "Buy up to 10 TC";
+		"03_BUY100" = "Buy up to 100 TC";
+		"09_EXIT" = "Stop buying cargo";
+	};
+
+	"cte_sellscreenchoice" = {
+		"00_NEXT" = "View next offer";
+		"01_SELL1" = "Sell 1 TC";
+		"02_SELL10" = "Sell up to 10 TC";
+		"03_SELL100" = "Sell up to 100 TC";
+		"09_EXIT" = "Stop selling cargo";
+	};
+
+	"cte_tradefloorchoice" = {
+		"01_NEXT" = "Move on";
+		"02_TALK" = "Talk";
+		"09_EXIT" = "Leave the trade floor";
+	};
+
+	"cte_tradeflooronlychoice" = {
+		"02_TALK" = "Talk";
+		"09_EXIT" = "Leave the trade floor";
+	};
+
+	"cte_manifestnext" = {
+		 "01_NEXT" = "Next page";
+  };
+	"cte_manifestlast" = {
+		 "01_NEXT" = "Leave manifest";
+  };
+
+	"cte_tradernet" = {
+		 "01_NEXT" = "Next article";
+		 "02_EXIT" = "Exit TraderNet";
+  };
+
+	"cte_tradernet_last" = {
+		 "02_EXIT" = "Exit TraderNet";
+  };
+
+
+	"cte_auc_opening" = {
+		"01_BACK" = "Come back later";
+		"02_BEGIN" = "Wait for the auction to start";
+	};
+
+	"cte_auc_santaari_bid" = {
+		"01_PASS" = "Make no bid now";
+		"02_BID" = "Make bid: buy 1 block";
+		"03_BIDALL" = "Make bid: buy all possible blocks";
+		"04_LEAVE" = "Leave the auction (cannot return)";
+	};
+
+	"cte_auc_colesque_bid" = {
+		"01_PASS" = "Make no bid now";
+		"02_BID" = "Make bid: minimum increment";
+		"03_BIDFIVE" = "Make bid: five increments";
+		"04_LEAVE" = "Leave the auction (cannot return)";
+	};
+
+	"cte_auc_laratan_bid" = {
+		"01_PASS" = "Buy no more tickets for now";
+		"02_BID" = "Buy 1 ticket";
+		"03_BIDFIVE" = "Buy 5 tickets";
+		"04_BIDTFIVE" = "Buy 25 tickets";
+	};
+
+	"cte_auc_angiana_bid" = {
+		"01_PASS" = "Make no bid now";
+		"02_BID" = "Make bid: minimum increment";
+		"03_BUYOUT" = "Buy out auction for specified price";
+		"04_LEAVE" = "Leave the auction (cannot return)";
+	};
+
+	"cte_auc_proximus_bid" = {
+		"01_PASS" = "Make no bid now";
+		"02_BID" = "Make bid: minimum increment";
+		"03_BIDFIVE" = "Make bid: five increments";
+		"04_LEAVE" = "Leave the auction (cannot return)";
+	};
+
+	"cte_auc_solans_bid" = {
+		"02_BID" = "Make bid: specified increment";
+		"04_LEAVE" = "Leave the auction (cannot return)";
+	};
+
+	"cte_auc_jaftra_bid" = {
+		"01_PASS" = "Make no bid now";
+		"02_BID" = "Make bid: buy cargo at current price";
+		"04_LEAVE" = "Leave the auction (cannot return)";
+	};
+
+	"cte_auc_xrata_bid" = {
+		"01_PASS" = "Make no bid now";
+		"02_BID" = "Make bid: minimum increment";
+		"03_BIDFIVE" = "Make bid: five increments";
+		"04_LEAVE" = "Leave the auction (cannot return)";
+	};
+
+
+	"cte_scav_deal" = {
+		"01_DEAL" = "You've got a deal";
+		"02_REFUSE" = "No deal";
+	};									
+
+	"cte_oc_deal" = {
+		"01_DEAL" = "Okay, I'll take the contract.";
+		"02_REFUSE" = "No, too risky.";
+	};
+
+	"cte_permit_deal" = {
+		"01_ACCEPT" = "Accept permit";
+		"02_REFUSE" = "Refuse permit (or alter destination)";
+	};
+
+	"cte_fetch_deal" = {
+		"01_ACCEPT" = "Yes, I can get those for you.";
+		"02_REFUSE" = "I don't think I can help.";
+	};
+
+	"cte_fetch_transfer" = {
+		"01_ACCEPT" = "Transfer cargo.";
+		"02_REFUSE" = "Do not transfer cargo.";
+	};
+
+
+}

@@ -1,0 +1,21 @@
+{
+				"cte_angryboa" = {
+					like_ship = "boa";
+					forward_weapon_type = "WEAPON_BEAM_LASER";
+					roles = "cte_angry";
+					ai_type = "pirateAI.plist";
+				};
+				"cte_angryboa2" = {
+					like_ship = "boa-mk2";
+					roles = "cte_angry";
+					ai_type = "pirateAI.plist";
+				};
+				"cte_angryanaconda" = {
+					like_ship = "anaconda";
+					forward_weapon_type = "WEAPON_BEAM_LASER";
+					aft_weapon_type = "WEAPON_BEAM_LASER";
+					roles = "cte_angry";
+					ai_type = "pirateAI.plist";
+				};
+
+}

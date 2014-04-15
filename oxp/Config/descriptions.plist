@@ -1,0 +1,189 @@
+{
+	"cte_rumour0" = "There's a good market for [cte_good] from [cte_source] in [cte_dest]";
+	"cte_rumour1" = "I made a tidy profit taking [cte_source] [cte_good] to [cte_dest]";
+	"cte_rumour2" = "I hear [cte_dest] is looking for [cte_good] right now";
+	"cte_rumour3" = "[cte_good]? [cte_source] is probably the best place to look";
+	"cte_rumour4" = "Last I heard, they were planning to do the [cte_source] to [cte_dest] run.";
+	"cte_rumour5" = "I think [cte_source] still has some [cte_good].";
+	"cte_rumour6" = "Going from [cte_source] to [cte_dest]? Carry some [cte_good] if you can.";
+	"cte_rumour7" = "You're going to [cte_dest]? [cte_good] will sell well.";
+	"cte_rumour8" = "Pick up the goods at [cte_source], and meet me at [cte_dest] for payment.";
+	"cte_rumour9" = "Best money for [cte_good] might be the [cte_source] to [cte_dest] run.";
+
+
+	"cte_collapserumour0" = "The market for [cte_good] in [cte_collapse] is way down.";
+	"cte_collapserumour1" = "[cte_collapse] isn't buying [cte_good] right now.";
+	"cte_collapserumour2" = "I hear the price of [cte_good] in [cte_collapse] is plummeting.";
+	"cte_collapserumour3" = "A big shipment of [cte_good] made it to [cte_collapse].";
+	"cte_collapserumour4" = "Where am I going to sell these [cte_good] if not [cte_collapse]?";
+	"cte_collapserumour5" = "Still no recovery of [cte_good] prices in [cte_collapse].";
+
+	"cte_shortagerumour0" = "I couldn't get any [cte_good] the last time I was in [cte_collapse].";
+	"cte_shortagerumour1" = "I hear that all the [cte_good] in [cte_collapse] have been bought up";
+	"cte_shortagerumour2" = "[cte_collapse] has a big shortage of [cte_good] at the moment.";
+	
+	"cte_ctd_food" = ("Bread","Sushi","TV Dinners","Pies","Cheeses","Bladderlash","Thrumpberry Juice","Sunflower Seeds","Fruits","Pineapples","Jelly Babies","Soups","Cutlets","Steaks","Stews");
+	"cte_ctd_textiles" = ("Silk","Cotton","Wool","Lace","Rugs","Fleece","Calico","Satin","Velvet");
+	"cte_ctd_radioactives"= ("Entangled Particles","Used Quarks","Higgs Bosons","Dark Matter","Quirium Cascade Isotopes","Gene-tweak Nanobots","Contained Antimatter");
+	"cte_ctd_slaves" = ("Clones","Convicts","Prisoners of War","Political Dissidents","Conscripts","Immature Tharglets","Captured Slavers");
+	"cte_ctd_liquorWines" = ("Wine","Beer","Spirits","Ale","Gin","Brandy","Vodka","Whisky","Evil Juice","Rum","Pan-Galactic Gargle Blasters");
+	"cte_ctd_luxuries" = ("Statues","Modern Art","Perfumes","Spices","Coffee","Jewellery","Paintings","Musical Instruments","Documentaries","Scratching Posts","Sculptures","Wristwatches");
+	"cte_ctd_narcotics" = ("Lobstoid Powder","Syndreamer","Arcturan Megaweed","Cigars","Starvision Juice","Mixed Hallucinogens","Snowdust Sheets");
+	"cte_ctd_computers" = ("Asteroid Plotters","Witchspace Analysers","Positronic AIs","Factory Robots","Long-range Scanners","Cryptographic Processors","Tactical Simulators","Targeting Computers");
+	"cte_ctd_machinery" = ("Coriolis Dampeners","Assembler Robots","Ploughshares","Tractors","Ore processors","Centrifuges","Conveyor Belts","Autotools","Light Aircraft","Hull cutters","Inertialess drives","Quirium Processors");
+	"cte_ctd_alloys" = ("Steel","Bronze","Brass","Thermaplate","Ultraglass","Polished Quirstone","High-temperature Ceramics","Pressed Duralium","Magnalium","Cerrosafe","Ultimet","Elinvar");
+	"cte_ctd_firearms" = ("Projectile Pistols","Laser Rifles","Plasma Rifles","Cell Disruptors","Mining Explosives","Tank Cannons","Automatic Weapons","Defense Turrets","Military Robots");
+	"cte_ctd_furs" = ("Reticulated Tipi Pelts","Shanaskilk Fur","Spotted Leather","Shark Skin","Cow Leather","Goat Leather","Fox Fur","Noseoid Leather");
+	"cte_ctd_minerals" = ("Aurium","Hematite Ores","Galena Ores","Silicates","Cassiterite Ores","Garnierite Ores","Sphalerite Ores","Basalt","Granite","Limestone","Chalk");
+
+
+	"cte_ctd_disaster" = ("severe earthquakes","heavy asteroid storms","major solar flares","the [nom1] pirate band","a Thargoid warfleet","terrorist attacks","power plant failures","sudden climate changes","violent revolutions","corporate takeovers","disputed election results","thousands of Trumbles","political disputes","assassinations","electrical storms","unexpected flooding","unusual droughts","failed scientific experiments","accidental terraformer releases","chemical spills");
+	"cte_ctd_event" = ("[cte_ctd_festivalevent]","[cte_ctd_galcopevent]","[cte_ctd_sport] [cte_ctd_sportevent]","[cte_ctd_corpevent]","[cte_ctd_scienceevent]");
+	"cte_ctd_festivalevent" = ("annual %R festival","celebration of [cte_ctd_dest]'s founding","%R holiday","[cte_ctd_relverb] of the [cte_ctd_reladj] [nom1] ceremony","commemoration of the Battle of %R","[cte_ctd_bignum]th year since %N's birth");
+	"cte_ctd_relverb" = ("Annunciation","Discovery","Rebirth","Death","Ascension","Floating","Forging");
+	"cte_ctd_reladj" = ("Sacred","Holy","Divine","Hallowed","Venerable","Sanctified","Blessed");
+	"cte_ctd_sport" = ("Zero-G Hockey","Zero-G Cricket","Vacuum Cricket","Vacuum Karate","Mud Tennis","Mud Hockey","Ring Racing");
+	"cte_ctd_sportevent" = ("match","tournament","quarter-finals","semi-finals","final","league","awards");
+	"cte_ctd_galcopevent" = ("GalNavy admiralty inspection","Galcop ambassador's visit","anti-Galcop protests","Galcop police recruitment fair","[cte_ctd_smallord] fleet visit","\"best-kept planet\" judges' arrival");
+	"cte_ctd_corpevent" = ("[nom1] Group opening sale","[nom1]'s new product announcement","[nom1]'s inter-city party","[nom1] Corp shareholder meeting","[nom1] and [nom1] merger");
+	"cte_ctd_scienceevent" = ("[cte_ctd_sciencefield] Conference","[cte_ctd_sciencefield] field trials","appointment of the new Chair of [cte_ctd_sciencefield]","opening of the [cte_ctd_sciencefield] department","[cte_ctd_sciencefield] grant awards");
+	"cte_ctd_sciencefield" = ("Witchspace Engineering","Gene-splicing","Laser Development","Quirium Cascade","Personality Editing","Thargoid Xenobiology","%Rweed Farming","Terraforming");
+	"cte_ctd_bignum" = ("1[cte_ctd_mednum]","2[cte_ctd_mednum]","3[cte_ctd_mednum]","4[cte_ctd_mednum]","5[cte_ctd_mednum]");
+	"cte_ctd_mednum" = ("00","25","50","75");
+	"cte_ctd_midnum" = ("6","8","10","12","15","20");
+	"cte_ctd_smallord" = ("1st","2nd","3rd","4th","5th","6th","7th","8th","9th");
+	"cte_ctd_escorts" = ("Cobra","Viper","Asp","Iguana","Mamba","Krait","Sidewinder","Gecko");
+
+	//	"cte_ctd_snoopers" = ("[cte_ctd_snoopers1]","[cte_ctd_snoopers2]","[cte_ctd_snoopers3]","[cte_ctd_snoopers4]");
+	// tradername, source, dest, deadline, good, random, generic
+	"cte_ctd_snoopers1" = "Trader [cte_ctd_tradername] in [cte_ctd_dest] reports that the system is buying up [cte_ctd_good] in advance of the [cte_ctd_event], with a particular preference for imports from [cte_ctd_source]. The market price has risen by over [cte_ctd_random] percent in the last day alone, with buyers even searching mixed containers of [cte_ctd_generic] in the hope of striking lucky. Increased demand is expected to continue until around [cte_ctd_deadline] when the event starts.";
+	"cte_ctd_snoopers2" = "Dispatcher [cte_ctd_tradername] at [cte_ctd_source] station tells us that shipments of [cte_ctd_good] to [cte_ctd_dest] have increased by [cte_ctd_random] percent this week due to the [cte_ctd_event]. They still have plenty left, if you're in the area and can get it to [cte_ctd_dest] before the big day on [cte_ctd_deadline].";
+	"cte_ctd_snoopers3" = "[cte_ctd_dest] planetary authorities have put out an urgent plea for [cte_ctd_good] after [cte_ctd_disaster] hit the system. So far, only [cte_ctd_source] has responded, and pilots will be paid well above commercial rates if they can get the [cte_ctd_generic] transferred before it's too late.";
+	"cte_ctd_snoopers4" = "Trader [cte_ctd_tradername] is looking for company on the [cte_ctd_source] to [cte_ctd_dest] route after [cte_ctd_disaster] in [cte_ctd_dest] pushed the prices of [cte_ctd_good] to unprecedented heights. Pirate activity on the route is expected to be above average, but the cargo must get through.";
+	"cte_ctd_snoopers5" = "Trade on the [cte_ctd_source] to [cte_ctd_dest] route is up significantly recently. Preparations for the [cte_ctd_event] are the likely cause, with the traditional [cte_ctd_good] likely to be in high demand.";
+	"cte_ctd_snoopers6" = "Wanted: [cte_ctd_disaster] in [cte_ctd_dest] have caused a significant spike in demand for [cte_ctd_source]ian [cte_ctd_good], according to our reporters.";
+	"cte_ctd_snoopers7" = "Near [cte_ctd_source]? Stationmaster [cte_ctd_tradername] recommends taking some of their surplus [cte_ctd_good] to [cte_ctd_dest], where it's the latest craze. Be quick before the fad wears off!";
+	"cte_ctd_snoopers8" = "[cte_ctd_deadline] has been set as the date for [cte_ctd_dest]'s [cte_ctd_event]. As usual, [cte_ctd_good] from [cte_ctd_source] are likely to fetch a good price as residents stock up.";
+	"cte_ctd_snoopers9" = "The recent [cte_ctd_disaster] in [cte_ctd_dest] are facing a slow Galcop response. [cte_ctd_source] is trying to arrange independent traders to take [cte_ctd_good] there in advance of the official convoy, expected to finally arrive on [cte_ctd_deadline].";
+
+
+	"cte_namegen" = "[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1];[nom1]";
+
+	"cte_auc_move" = ("[cte_auc_move1]","[cte_auc_move2]","[cte_auc_move3]");
+	"cte_auc_move1" = "The [0] auctioneer [cte_auc_auctioneer] will be in [cte_auc_system] at [cte_auc_time] to sell a significant quantity of [cte_auc_good].";
+	"cte_auc_move2" = "[cte_auc_system] authorities have announced that [cte_auc_auctioneer] has won the rights to sell their surplus [cte_auc_good]. The auction will start at [cte_auc_time].";
+	"cte_auc_move3" = "Galcop announced that [cte_auc_auctioneer] will be auctioning off [cte_auc_good] confiscated from pirates in [cte_auc_system] at [cte_auc_time].";
+	"cte_auc_move4" = "[cte_auc_auctioneer] has announced that their next auction will be in [cte_auc_system] soon, with top billing given to a large load of [cte_auc_good]";
+	"cte_auc_move5" = "The %N estate has appointed [cte_auc_auctioneer] to sell off unwanted cargo in [cte_auc_system] at [cte_auc_time].";
+	"cte_auc_move6" = "An unexpected [cte_auc_good] windfall in [cte_auc_system] is being auctioned by [cte_auc_auctioneer] at [cte_auc_time].";
+
+	"cte_auc_name01" = "Tha’ Neilsen";
+	"cte_auc_name02" = "Dibire Folkbern";
+	"cte_auc_name03" = "Ancea’in Hector";
+	"cte_auc_name04" = "Seno Starston";
+	"cte_auc_name05" = "Allaon ben Larling";
+	"cte_auc_name11" = "Annuitqura Kirbairn";
+	"cte_auc_name12" = "Reence Williams";
+	"cte_auc_name13" = "Ouat Williams";
+	"cte_auc_name14" = "Ousobi Neiler";
+	"cte_auc_name15" = "Aten Atheson";
+	"cte_auc_name21" = "La Nayls";
+	"cte_auc_name22" = "Ti Xea’nuets";
+	"cte_auc_name23" = "Ororre Goodstain";
+	"cte_auc_name24" = "Quri Dennyston";
+	"cte_auc_name25" = "Eslaange Courer";
+	"cte_auc_name31" = "Rezaa’es Soteraer";
+	"cte_auc_name32" = "Riouse Branbourn";
+	"cte_auc_name33" = "Laesesabis ben Davi";
+	"cte_auc_name34" = "Eratus Kir";
+	"cte_auc_name35" = "Ininrion Athlyng";
+	"cte_auc_name41" = "Esonra Fayrsby";
+	"cte_auc_name42" = "Vedi McDarreson";
+	"cte_auc_name43" = "Ilatnuer Innestain";
+	"cte_auc_name44" = "Erened Jonston";
+	"cte_auc_name45" = "Usa’stso Dennyborn";
+	"cte_auc_name51" = "Thraon Garrison";
+	"cte_auc_name52" = "Abonal Wilkiner-Folk-Courson";
+	"cte_auc_name53" = "Itanxe Cawson";
+	"cte_auc_name54" = "Ara’ Larsen";
+	"cte_auc_name55" = "Atraar Jon";
+	"cte_auc_name61" = "Qunuabve Hector";
+	"cte_auc_name62" = "Nuon Folks";
+	"cte_auc_name63" = "Georla Soterafyre";
+	"cte_auc_name64" = "Za Rogerson";
+	"cte_auc_name65" = "Mastrees Laws";
+	"cte_auc_name71" = "An Inniefur";
+	"cte_auc_name72" = "Onallo Brans";
+	"cte_auc_name73" = "Raanonxe Jamesby";
+	"cte_auc_name74" = "Edor Fayrstain";
+	"cte_auc_name75" = "Esrebe Lyttlesby";
+
+	"cte_auc_rules0" = "There will be an initial starting bid. If no-one offers to buy at that price, the bid will be reduced until someone accepts. Whoever does gets the first block of goods at that price, and can buy additional blocks at the same price if they wish. If any goods remain, bidding continues.";
+	"cte_auc_rules1" = "We'll open the bidding, and everyone can bid or not. Bids must be higher than the last previous bid. You don't have to bid every time to stay in the auction. The highest bidder wins the entire lot.";
+	"cte_auc_rules2" = "Auction tickets will be sold at a fixed price. You can buy as many as you want. We'll offer tickets five times, so you can buy more in response to other bidders. For each separate TC, we will then select a random ticket, and give the container to the owner of that ticket. The same ticket can win more than one TC.";
+	"cte_auc_rules3" = "We'll open the bidding, and everyone can bid or not. Bids must be higher than the last previous bid. You don't have to bid every time to stay in the auction. The highest bidder wins the entire lot. At any time, you can pay a buyout price higher than the current bid to immediately win the auction.";
+	"cte_auc_rules4" = "We'll open the bidding, and everyone can bid or not. Bids must be higher than the last previous bid. You don't have to bid every time to stay in the auction. While this is going on, a [cte_auc_racer] will be flying up from the planet's surface. When it reaches the station buoy, the auction ends and the highest bidder at that time wins.";
+	"cte_auc_rules5" = "The bidding will open, and then everyone either makes a higher bid in turn, or drops out of the auction altogether. The last remaining bidder wins the entire lot.";
+	"cte_auc_rules6" = "There will be an initial starting bid. If no-one offers to buy at that price, the bid will be reduced until someone accepts. Whoever does gets the entire lot at that price.";
+	"cte_auc_rules7" = "We'll open the bidding, and everyone can bid or not. Bids must be higher than the last previous bid. You don't have to bid every time to stay in the auction. The highest bidder wins the entire lot. The second-highest bidder must also pay an amount equal to their last bid, but doesn't get anything for it.";
+
+
+	"cte_auc_racer" = ("Mamba","Fer-de-lance","Asp","Eel Rapier","Cat Mk I","Bandy-Bandy Courier","Adder Mk II");
+
+
+	"cte_scav_name0" = "Nuza Thairs";
+	"cte_scav_name1" = "Edlanost Nailson";
+	"cte_scav_name2" = "Ma Arleilbi-Neilsby";
+	"cte_scav_name3" = "Reonit McArleilbifer";
+	"cte_scav_name4" = "Is Kirfur-Garristoun";
+	"cte_scav_name5" = "Anveno Goodsen";
+	"cte_scav_name6" = "Itqu Fairsdottir";
+	"cte_scav_name7" = "Zaouth Samson";
+	"cte_scav_name8" = "Getesoce Athe";
+	"cte_scav_name9" = "Dizazadi Jameson";
+	"cte_scav_name10" = "Stri Davyson";
+	"cte_scav_name11" = "Loso O'Kirfire";
+	"cte_scav_name12" = "Quilza Lyttlesen";
+
+	"cte_scav_move" = ("[cte_scav_move1]","[cte_scav_move2]","[cte_scav_move3]");
+	"cte_scav_stay" = ("[cte_scav_stay1]","[cte_scav_stay2]","[cte_scav_stay3]","[cte_scav_stay4]");
+	"cte_scav_rumour" = "[cte_scav_cargo]? Try [cte_scav_name] in [cte_scav_pos]";
+
+	"cte_scav_move1" = "[cte_scav_name], [0] collector of [cte_scav_cargo], has moved from [cte_scav_oldpos] to [cte_scav_newpos] following up rumours of new finds in that region. Traders should note that they will pay top prices for genuine examples of these goods.";
+	"cte_scav_move2" = "Sellers of [cte_scav_cargo] should note that [cte_scav_name] is offering excellent prices for these goods in [cte_scav_newpos]";
+	"cte_scav_move3" = "[cte_scav_newpos] is now hosting [cte_scav_name]'s hunt for [cte_scav_cargo], after thin pickings in [cte_scav_oldpos]. Anyone with leads or sales should contact them soon.";
+
+		"cte_scav_stay1" = "A reminder to our readers that [cte_scav_name] is offering excellent prices for [cte_scav_cargo] in [cte_scav_oldpos].";
+		"cte_scav_stay2" = "An anonymous tipoff from [cte_scav_oldpos] - a trader was seen being paid well over 1000 ₢/TC by selling [cte_scav_cargo] to the [0] collector [cte_scav_name]. We recommend the trip to anyone else with the goods.";
+		"cte_scav_stay3" = "After recent successful trades, [cte_scav_name] has announced that they will be remaining in [cte_scav_oldpos] for a little longer in their search for [cte_scav_cargo].";
+		"cte_scav_stay4" = "A reader asked if we'd do a 'Know Your Good' for [cte_scav_cargo]. Well, there's not a lot to say - it's virtually worthless in most places, though you might find a decent price for curiosity value if you're lucky. However, [cte_scav_name], currently at [cte_scav_oldpos], has been collecting them for years and will pay a good price if you head that way.";
+
+	"cte_regionnews_dispute" = ("escort premium","shipping payments","import volumes","transport exclusivity");
+	"cte_regionnews_veryillegal" = ("immature Tharglets","quirium bombs","robotic assassins","compromising photographs of Galcop officials","stolen Naval blueprints");
+
+	"cte_regionnews_area_2_1" = "Overproduction of [cte_region_cargo] in the [cte_region_name] has led to a significant drop in price for most of the sector's speciality cargoes.";
+	"cte_regionnews_area_3_1" = "After the [cte_ctd_disaster] in the [cte_region_name], the supply of [cte_region_cargo] has been significantly disrupted. Prices of the dwindling export stocks are expected to remain high for some time.";
+	"cte_regionnews_area_4_1" = "Escorted by a strong force of [cte_ctd_midnum] [cte_ctd_escorts]s, the Bulk Haulers of [cte_ctd_tradecompany] reached the [cte_region_name] safely today. Their cargoes of exotic [cte_region_cargo] are likely to keep the local systems supplied for some time.";
+	"cte_regionnews_area_5_1" = "Increased piracy around the [cte_region_name] has led to a significant shortage of most types of [cte_region_cargo] in the sector. Dispatchers at the stations are reporting higher prices than normal, and the system governments are petitioning Galcop for a stronger response.";
+	"cte_regionnews_area_6_1" = "Concerned about the effects on the local youth, authorities in the [cte_region_name] have banned the import of [cte_region_cargo]. Trader groups and local manufacturers have condemned the decision.";
+	"cte_regionnews_area_7_1" = "After over-enthusiastic trading caused a brief shortage of [cte_region_cargo] in the [cte_region_name], the local authorities have announced that they will place a bounty on anyone exporting it from their systems without a license. Galcop warns that licensing offices are likely to be busier than usual.";
+	"cte_regionnews_area_8_1" = "Three new organisations have entered the [cte_region_cargo] market in the [cte_region_name] and their existing rivals have responded with a substantial price cut. The sector authorities are considering complaints of anti-competitive practices, but the appeal will not be heard for at least a month.";
+	"cte_regionnews_area_9_1" = "After all of the workers in the [cte_region_name] were given the week off to attend the [cte_ctd_event], production of [cte_region_cargo] has been slow to restart. Expect to pay an excess until the supply chain is normalised.";
+	"cte_regionnews_area_10_1" = "Two Anacondas from [nom1] Shipping reached the [cte_region_name] yesterday, leaving the sector in the unusual position of having a surplus of [cte_region_cargo]. Until it's all processed, you can probably get better prices elsewhere.";
+	"cte_regionnews_area_11_1" = "Talks between local business and trading groups broke down yesterday over the [cte_regionnews_dispute] clauses in the [cte_region_cargo] contracts. The [cte_region_name] have announced that they will pay a premium to independent traders, to keep their economies going and break the negotiation deadlock.";
+
+	"cte_regionnews_lane_2_1" = "Trade volumes on the [cte_region_name] have been falling recently, leading to concern among the route's governments. A temporary export tax cut has been applied to speciality [cte_region_cargo] in an attempt to revitalise the trade route.";
+	"cte_regionnews_lane_3_1" = "[nom1] Shipping has recently agreed a major contract to carry speciality [cte_region_cargo] along the [cte_region_name]. While there is still a small amount of surplus export cargo, prices have increased greatly.";
+	"cte_regionnews_lane_4_1" = "Increased Galcop patrols on the [cte_region_name] in preparation for the [cte_ctd_event] have had the interesting side-effect that pirate attacks on [cte_region_cargo] transportation have been deterred. Import prices along the lane are down by over 30% as traders take advantage of the safer routes.";
+	"cte_regionnews_lane_5_1" = "A surprise cut in import duty on [cte_region_cargo] on the [cte_region_name] has been shared between traders and local businesses alike. Reports are that the effect on system budgets has been higher than expected, and the cut is expected to be temporary only.";
+	"cte_regionnews_lane_6_1" = "After reports that cargoes of [cte_region_cargo] were being used to smuggle [cte_regionnews_veryillegal] along the [cte_region_name], Galcop has responded by demanding that all legitimate traders produce full inspection and origin documentation for any [cte_region_cargo] they import or face criminal charges.";
+	"cte_regionnews_lane_7_1" = "System authorities on the [cte_region_name] have awarded an exclusive contract to [nom1] Transportation for trade in [cte_region_cargo] along the lane, and have declared unregistered exports illegal. Galcop are being asked to investigate if this is an abuse of the by-law process.";
+	"cte_regionnews_lane_8_1" = "The recent [cte_ctd_disaster] leading to the cancellation of the [cte_ctd_event] has caused numerous traders to abandon contracts for [cte_region_cargo]. Surpluses are especially large, and prices favourable, on the [cte_region_name].";
+	"cte_regionnews_lane_9_1" = "Suppliers of [cte_region_cargo] along the [cte_region_name] have been hit by labour disputes after attempting to ban their workers from attending the [cte_ctd_event]. Some cargo is still available, but prices are rising in anticipation of a protracted strike.";
+	"cte_regionnews_lane_10_1" = "Taking [cte_region_cargo] to systems on the [cte_region_name]? You might be out of luck - the [0] exile %N [nom1] has announced that they will be attempting to produce it locally. Market prices have fallen in anticipation, though some sources warn that the attempt is likely to fail.";
+	"cte_regionnews_lane_11_1" = "A Thargoid incursion on the [cte_region_name] has destroyed over [cte_ctd_mednum] ships before the [cte_ctd_smallord] naval battle group were able to repulse them. Among the casualties was a large trade fleet carrying [cte_region_cargo], and import prices are expected to remain high until new delivery contracts can be arranged.";
+
+
+
+
+}

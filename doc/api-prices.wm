@@ -1,0 +1,33 @@
+Any world script registered as providing trading price fluctuation
+definitions for New Cargoes through
+[[NewCargoesAPI#registerPriceChange]] must contain all of these
+functions.
+
+Look at the Scripts/cargotyperegional.js script of the New Cargoes OXP
+for a simple example.
+
+==Required functions==
+
+===priceChange===
+<code>int priceChange(CargoID good, Context context)</code>
+
+Returns a multiplier to the price of the specified good, in the
+current system. This multiplier will be applied to all price
+calculations done in the current system, for all stations.
+
+Return 1 if no special multiplier applies.
+
+''context'' will be one of "FLUX_EXPORT", "FLUX_IMPORT" or
+"FLUX_MISC", depending on whether the good is an export, an import, or
+neither. A good may in theory be all three at different stations in
+the same system.
+
+===priceGossip===
+<code>String? priceGossip</code>
+
+If you wish there to be gossip in the trader bars of this system about
+these price modifications, return it here. Gossip should be at most 80
+characters in length, and start with the string "* ".
+
+Otherwise return false.
+

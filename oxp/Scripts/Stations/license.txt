@@ -1,0 +1,5 @@
+In addition to the general license for New Cargoes, the scripts in
+this directory may be incorporated, with or without modification, in
+to other OXPs to redefine (or undefine) New Cargoes behaviour for the
+stations they modify, as if they were public domain.
+

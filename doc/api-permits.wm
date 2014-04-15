@@ -1,0 +1,50 @@
+Any world script registered as providing trading permit definitions
+for New Cargoes through [[NewCargoesAPI#registerPermit]] must
+contain all of these functions. Permits can include things which make
+goods ''more'' illegal than they would otherwise be (e.g. a trade
+embargo)
+
+Look at the Scripts/cargotypepermits.js script of the New Cargoes OXP
+for a simple example.
+
+==Required functions==
+
+===checkImport===
+<code>int checkImport(CargoID good, int quantity, bool dryrun)</code>
+
+Returns the per-TC legal penalty which these "permits" would apply to
+that good for docking at a Galcop-rules station. This will be added to
+that provided by other permit extensions and the base import penalty
+of the good to calculate the overall legal penalty.
+
+If ''dryrun'' is true, then the check is for a "what-if" scenario, and
+the state of the permit must not be changed by the check (e.g. for a
+limited use permit)
+
+===checkPermit===
+<code>int checkPermit(CargoID good, int quantity, bool dryrun)</code>
+
+Returns the per-TC legal penalty which these "permits" would apply to
+that good for launching from a Galcop-rules station. This will be
+added to that provided by other permit extensions and the base import
+penalty of the good to calculate the overall legal penalty.
+
+If ''dryrun'' is true, then the check is for a "what-if" scenario, and
+the state of the permit must not be changed by the check (e.g. for a
+limited use permit)
+
+===describePermits===
+<code>String describePermits()</code>
+
+Returns a short string describing the legality modifications currently
+applying to the player in this system as a result of this world
+script.
+
+===permitGossip===
+<code>String? permitGossip()</code>
+
+If you wish there to be gossip in the trader bars of this system about
+this permit script, return it here. Gossip should be at most 80
+characters in length, and start with the string "* ".
+
+Otherwise return false.
