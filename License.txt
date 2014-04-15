@@ -1,0 +1,30 @@
+New Cargoes licensed under CC-BY-SA 3.0
+http://creativecommons.org/licenses/by-sa/3.0/
+
+If you want to use any of the components in ways unrelated to New
+Cargoes, please rename them to avoid OXP conflicts.
+
+Additional license options apply to the OXP station New Cargoes
+definitions: see the Scripts/Stations/ directory for details
+
+Background for Tradenet Snoopers channel taken from
+http://en.wikipedia.org/wiki/File:Port_of_Singapore_Keppel_Terminal.jpg
+license CC-BY-SA 2.5 copyright 2006 Calvin Teo
+
+Background for Auction screens modified from an image with this license:
+  This Wikipedia and Wikimedia Commons image is from the user Chris 73
+  and is freely available at 
+  //commons.wikimedia.org/wiki/File:Auction_Tsukiji_fishmarket.jpg
+  under the creative commons cc-by-sa 3.0 license.
+
+Background for Cargo screens modified from
+http://commons.wikimedia.org/wiki/File:Containerterminal_in_Tema,_Ghana.jpg
+CC-BY-SA 3.0 by SteKrueBe
+
+Background for trading floors from
+http://commons.wikimedia.org/wiki/File:Sao_Paulo_Stock_Exchange.jpg
+CC-BY 2.0 by Rafael Matsunaga
+
+Background for permits from
+http://en.wikipedia.org/wiki/File:Mantelb%C3%B6gen.JPG
+Public domain (Germany)
