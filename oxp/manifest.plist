@@ -1,0 +1,11 @@
+{
+	"identifier" = "oolite.oxp.cim.new-cargoes";
+	"required_oolite_version" = "1.79";
+	"title" = "New Cargoes";
+	"version" = "1.2.3";
+	"category" = "Mechanics";
+	"description" = "New Cargoes adds over 100 new specialist trade goods to the 8 galaxies through the interfaces screen. In addition, a variety of new trading opportunities are available.";
+	"author" = "cim";
+	"information_url" = "http://wiki.alioth.net/index.php/New_Cargoes";
+	"license" = "CC-BY-SA 3.0";
+}
